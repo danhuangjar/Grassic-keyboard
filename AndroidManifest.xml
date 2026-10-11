@@ -6,16 +6,17 @@
 
     <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33" />
 
-    <application
-        android:label="Hello World"
-        android:theme="@android:style/Theme.Material.Light.DarkActionBar">
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+    <application android:label="MyIME">
+        <service
+            android:name=".MyIME"
+            android:exported="true"
+            android:permission="android.permission.BIND_INPUT_METHOD">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.view.InputMethod" />
             </intent-filter>
-        </activity>
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method" />
+        </service>
     </application>
 </manifest>

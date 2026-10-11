@@ -38,7 +38,7 @@ javac \
     -classpath "$ANDROID_JAR" \
     -d "$OBJ" \
     "$GEN/com/example/hello/R.java" \
-    "$PROJECT/src/com/example/hello/MainActivity.java"
+    "$PROJECT/src/com/example/hello/MyIME.java"
 
 echo "=== Step 4: DEX ==="
 dx --dex --output="$BUILD/classes.dex" "$OBJ"

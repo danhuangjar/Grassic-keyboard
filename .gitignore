@@ -1,3 +1,7 @@
 build/
 *.apk
 *.keystore
+build/
+*.apk
+*.keystore
+.debug.keystore
